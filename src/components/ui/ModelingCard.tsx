@@ -14,9 +14,10 @@ export const ModelingCard: React.FC<Props> = (props) => {
   return (
     <Paper sx={{ height: 200 }}>
       <Canvas>
+        <ambientLight intensity={0.08} />
         <pointLight position={[5, 5, 5]} />
-        <Suspense fallback={null}>{Model}</Suspense>
         <PerspectiveCamera makeDefault position={[4, 5, 5]} />
+        <Suspense fallback={null}>{Model}</Suspense>
         <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
       </Canvas>
     </Paper>
