@@ -1182,38 +1182,10 @@
     "core-js-pure" "^3.19.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.13.10":
-  "integrity" "sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.0.tgz"
-  "version" "7.16.0"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.14.6":
-  "integrity" "sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.0.tgz"
-  "version" "7.16.0"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.15.4":
-  "integrity" "sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.0.tgz"
-  "version" "7.16.0"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.9.2":
-  "integrity" "sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.0.tgz"
-  "version" "7.16.0"
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+  "integrity" "sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.3.tgz"
+  "version" "7.16.3"
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
@@ -1782,21 +1754,21 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.10.2.tgz"
   "version" "2.10.2"
 
-"@react-three/drei@^7.20.1":
-  "integrity" "sha512-Cv7smD5FmCAaTh7aZoX4g1BdsOht3xqHocUOI2kuKTaqa8+wgpCR9geugfuGnk5C9tKMMI6axv7lwx7RDm5YRg=="
-  "resolved" "https://registry.npmjs.org/@react-three/drei/-/drei-7.20.1.tgz"
-  "version" "7.20.1"
+"@react-three/drei@^7.20.3":
+  "integrity" "sha512-lHcBvKLzEBzT9rSm0PEpKb5gxoAoUOO4fOb8snMPQtSMAzJu99BzOMwulJ7RchbyCoQcanIm3xJnAfeHSvyvSA=="
+  "resolved" "https://registry.npmjs.org/@react-three/drei/-/drei-7.20.3.tgz"
+  "version" "7.20.3"
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "detect-gpu" "^3.1.21"
+    "detect-gpu" "^3.1.25"
     "glsl-noise" "^0.0.0"
     "lodash.omit" "^4.5.0"
     "lodash.pick" "^4.4.0"
-    "react-composer" "^5.0.1"
+    "react-composer" "^5.0.2"
     "react-merge-refs" "^1.1.0"
     "stats.js" "^0.17.0"
-    "three-mesh-bvh" "^0.5.0"
-    "three-stdlib" "^2.5.4"
+    "three-mesh-bvh" "^0.5.2"
+    "three-stdlib" "^2.5.7"
     "troika-three-text" "^0.43.0"
     "use-asset" "^1.0.4"
     "utility-types" "^3.10.0"
@@ -4577,7 +4549,7 @@
   "resolved" "https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz"
   "version" "1.0.4"
 
-"detect-gpu@^3.1.21":
+"detect-gpu@^3.1.25":
   "integrity" "sha512-mYy+lVU8+jbQV2jEmdrdE/MWvqfsbDfUBPJQln7Yf2KC8PuEOUspB+clZAIfeSGZBS0m1azOEuVnk5mvW4511Q=="
   "resolved" "https://registry.npmjs.org/detect-gpu/-/detect-gpu-3.1.25.tgz"
   "version" "3.1.25"
@@ -9715,7 +9687,7 @@
     "regenerator-runtime" "^0.13.7"
     "whatwg-fetch" "^3.4.1"
 
-"react-composer@^5.0.1":
+"react-composer@^5.0.2":
   "integrity" "sha512-6E2UNjUF0e7KRY+/faU2Hv7D9zagXnYdTfSSCGdYfuds6mRnVpN19vrbHXShaQzJNVXL4VOUb8qq6DvClDIG1g=="
   "resolved" "https://registry.npmjs.org/react-composer/-/react-composer-5.0.2.tgz"
   "version" "5.0.2"
@@ -11333,15 +11305,15 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
-"three-mesh-bvh@^0.5.0":
+"three-mesh-bvh@^0.5.2":
   "integrity" "sha512-DAKWujkp8xpSBqGiIsZbZC1utxAbYBg0SShQk9LdOG/xWWl1/OLK76eXDGfov47trl3L7PUTHi0hhRvZdVro1Q=="
   "resolved" "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.5.2.tgz"
   "version" "0.5.2"
 
-"three-stdlib@^2.5.4":
-  "integrity" "sha512-9Yba7LbwvKSqk09Pu+HHSnOTAhCWcLsIV9r2p0mcerVaqUpL1uKY4BSTzbWkhh4mMA/s/etlW0fYdL3pW/pPjg=="
-  "resolved" "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.5.5.tgz"
-  "version" "2.5.5"
+"three-stdlib@^2.5.7":
+  "integrity" "sha512-y0FnGoseiTr00NaDkU+1xMXXu19rjVudF3IoMVGxxfYNq5RMAZTjw7n8Vgp0rLXgqSOwG5HkZDalvlo64t3inQ=="
+  "resolved" "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.5.7.tgz"
+  "version" "2.5.7"
   dependencies:
     "@babel/runtime" "^7.14.6"
     "@webgpu/glslang" "^0.0.15"
