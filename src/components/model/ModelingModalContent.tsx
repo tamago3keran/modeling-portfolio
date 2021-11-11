@@ -5,8 +5,8 @@ import { Modeling } from "./Modeling";
 const styles = {
   container: {
     position: "absolute" as "absolute",
-    width: "50vw",
-    height: "50vw",
+    width: "90vmin",
+    height: "90vmin",
   },
 };
 
