@@ -2,24 +2,24 @@ import React from "react";
 import { Paper } from "@mui/material";
 import { Modeling } from "./Modeling";
 
-const style = {
-  position: "absolute" as "absolute",
-  top: "10%",
-  left: "10%",
-  width: "80%",
-  height: "80%",
+const styles = {
+  container: {
+    position: "absolute" as "absolute",
+    width: "50vw",
+    height: "50vw",
+  },
 };
 
 type Props = {
   name: string | null;
 };
 
-export const ModelingModalContent: React.FC<Props> = (props) => {
-  if (!props.name) return null;
+export const ModelingModalContent: React.FC<Props> = ({ name }) => {
+  if (!name) return null;
 
   return (
-    <Paper sx={style}>
-      <Modeling name={props.name} />
+    <Paper style={styles.container}>
+      <Modeling name={name} />
     </Paper>
   );
 };

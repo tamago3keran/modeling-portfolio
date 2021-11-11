@@ -5,10 +5,11 @@ import { selectModelingComponent } from "../../lib/SelectModelingComponent";
 
 type Props = {
   name: string;
+  enableClick?: boolean;
 };
 
-export const Modeling: React.FC<Props> = (props) => {
-  const Modeling = selectModelingComponent(props.name);
+export const Modeling: React.FC<Props> = ({ name, enableClick = false }) => {
+  const Modeling = selectModelingComponent(name);
 
   return (
     <Canvas>
@@ -16,7 +17,11 @@ export const Modeling: React.FC<Props> = (props) => {
       <pointLight position={[5, 5, 5]} />
       <PerspectiveCamera makeDefault position={[4, 5, 5]} />
       <Suspense fallback={null}>{Modeling}</Suspense>
-      <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+      <OrbitControls
+        enablePan={enableClick}
+        enableZoom={enableClick}
+        enableRotate={enableClick}
+      />
     </Canvas>
   );
 };
