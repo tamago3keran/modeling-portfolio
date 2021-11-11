@@ -19,7 +19,7 @@ export const ModelingModalContent: React.FC<Props> = ({ name }) => {
 
   return (
     <Paper style={styles.container}>
-      <Modeling name={name} />
+      <Modeling name={name} enableClick={true} />
     </Paper>
   );
 };
