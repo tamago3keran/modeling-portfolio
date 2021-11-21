@@ -1,15 +1,20 @@
 import React from "react";
 import { Paper } from "@mui/material";
+import { styled } from "@mui/system";
 import { ModelingContainer } from "./ModelingContainer";
 
 type Props = {
   name: string;
 };
 
+const Container = styled(Paper)({
+  height: 200,
+});
+
 export const ModelingCard: React.FC<Props> = (props) => {
   return (
-    <Paper sx={{ height: 200 }}>
+    <Container>
       <ModelingContainer name={props.name} />
-    </Paper>
+    </Container>
   );
 };

@@ -1,13 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Modal } from "@mui/material";
-
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-};
+import { styled } from "@mui/system";
 
 export interface ModalHandler {
   onClose: () => void;
@@ -20,6 +13,12 @@ type Props = {
     | undefined;
   children: JSX.Element;
 };
+
+const Container = styled(Modal)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
 
 export const ModalWrapper = forwardRef<ModalHandler, Props>(
   ({ onClose, children }, ref) => {
@@ -35,9 +34,9 @@ export const ModalWrapper = forwardRef<ModalHandler, Props>(
     }));
 
     return (
-      <Modal onClose={onClose} open={open} style={styles.container}>
+      <Container onClose={onClose} open={open}>
         {children}
-      </Modal>
+      </Container>
     );
   }
 );
