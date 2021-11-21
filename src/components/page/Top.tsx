@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Container, Grid } from "@mui/material";
 import { DenseAppBar } from "../ui/DenseAppBar";
 import { ModelingCard } from "../model/ModelingCard";
-import { ModalWrapper } from "../ui/ModalWrapper";
+import { ModalHandler, ModalWrapper } from "../ui/ModalWrapper";
 import { ModelingModalContent } from "../model/ModelingModalContent";
 
 const RESOURCE = [
@@ -15,16 +15,20 @@ const RESOURCE = [
 ];
 
 export const Top: React.FC = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const modalRef = useRef({} as ModalHandler);
+
   const [selectedModelingName, setSelectedModelingName] = useState<
     string | null
   >(null);
-  const handleOpen = (modelingName: string | null) => {
-    setOpen(true);
+
+  const onClick = (modelingName: string | null) => {
+    if (!modalRef) return;
+    modalRef.current.onOpen();
     setSelectedModelingName(modelingName);
   };
-  const handleClose = () => {
-    setOpen(false);
+  const onClose = () => {
+    if (!modalRef) return;
+    modalRef.current.onClose();
     setSelectedModelingName(null);
   };
 
@@ -36,8 +40,8 @@ export const Top: React.FC = () => {
           {RESOURCE.map((resource, idx) => (
             <Grid
               item
-              onClick={() => handleOpen(resource.name)}
               key={idx}
+              onClick={() => onClick(resource.name)}
               lg={2}
               md={3}
               sm={4}
@@ -47,7 +51,7 @@ export const Top: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-        <ModalWrapper open={open} handleClose={() => handleClose()}>
+        <ModalWrapper ref={modalRef} onClose={onClose}>
           <ModelingModalContent name={selectedModelingName} />
         </ModalWrapper>
       </Container>
