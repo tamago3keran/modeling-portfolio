@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { Paper } from "@mui/material";
-import { Modeling } from "./Modeling";
+import { ModelingContainer } from "./ModelingContainer";
 
 const styles = {
   container: {
@@ -20,7 +20,7 @@ export const ModelingModalContent = forwardRef(({ name }: Props, ref) => {
 
   return (
     <Paper style={styles.container}>
-      <Modeling enableClick={true} name={name} />
+      <ModelingContainer autoRotation={true} enableClick={true} name={name} />
     </Paper>
   );
 });
