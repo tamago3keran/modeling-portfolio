@@ -1,27 +1,24 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import React, { useRef, Suspense } from "react";
+import { useFrame } from "@react-three/fiber";
 import { selectModelingComponent } from "../../lib/SelectModelingComponent";
 
 type Props = {
+  autoRotation: boolean;
   name: string;
-  enableClick?: boolean;
 };
 
-export const Modeling: React.FC<Props> = ({ name, enableClick = false }) => {
+export const Modeling: React.FC<Props> = ({ autoRotation, name }) => {
   const Modeling = selectModelingComponent(name);
+  const modelingRef = useRef({} as any);
+
+  useFrame(({ clock }) => {
+    if (!autoRotation) return;
+    modelingRef.current.rotation.y = clock.getElapsedTime();
+  });
 
   return (
-    <Canvas>
-      <ambientLight intensity={0.08} />
-      <pointLight position={[5, 5, 5]} />
-      <PerspectiveCamera makeDefault position={[4, 5, 5]} />
+    <mesh ref={modelingRef}>
       <Suspense fallback={null}>{Modeling}</Suspense>
-      <OrbitControls
-        enablePan={enableClick}
-        enableZoom={enableClick}
-        enableRotate={enableClick}
-      />
-    </Canvas>
+    </mesh>
   );
 };

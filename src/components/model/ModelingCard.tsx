@@ -1,6 +1,6 @@
 import React from "react";
 import { Paper } from "@mui/material";
-import { Modeling } from "./Modeling";
+import { ModelingContainer } from "./ModelingContainer";
 
 type Props = {
   name: string;
@@ -9,7 +9,7 @@ type Props = {
 export const ModelingCard: React.FC<Props> = (props) => {
   return (
     <Paper sx={{ height: 200 }}>
-      <Modeling name={props.name} />
+      <ModelingContainer name={props.name} />
     </Paper>
   );
 };
