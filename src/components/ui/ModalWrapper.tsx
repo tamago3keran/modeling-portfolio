@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Modal } from "@mui/material";
 
 const styles = {
@@ -9,20 +9,35 @@ const styles = {
   },
 };
 
+export interface ModalHandler {
+  onClose: () => void;
+  onOpen: () => void;
+}
+
 type Props = {
-  open: boolean;
-  handleClose: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onClose:
+    | ((event: {}, reason: "backdropClick" | "escapeKeyDown") => void)
+    | undefined;
   children: JSX.Element;
 };
 
-export const ModalWrapper: React.FC<Props> = ({
-  open = false,
-  handleClose,
-  children,
-}) => {
-  return (
-    <Modal style={styles.container} open={open} onClose={handleClose}>
-      {children}
-    </Modal>
-  );
-};
+export const ModalWrapper = forwardRef<ModalHandler, Props>(
+  ({ onClose, children }, ref) => {
+    const [open, setOpen] = useState(false);
+
+    useImperativeHandle(ref, () => ({
+      onOpen: () => {
+        setOpen(true);
+      },
+      onClose: () => {
+        setOpen(false);
+      },
+    }));
+
+    return (
+      <Modal onClose={onClose} open={open} style={styles.container}>
+        {children}
+      </Modal>
+    );
+  }
+);
