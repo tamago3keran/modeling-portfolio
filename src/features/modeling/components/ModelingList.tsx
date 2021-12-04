@@ -2,12 +2,12 @@ import React, { useRef, useState } from "react";
 import { Grid } from "@mui/material";
 import { Card } from "../../../components/Elements/Card/Card";
 import { Modeling } from "../../../features/modeling/components/Modeling";
+import { ModelingModalContent } from "../../../features/modeling/components/ModelingModalContent";
 import { CanvasWrapper } from "../../../components/Elements/Canvas/CanvasWrapper";
 import {
   ModalHandler,
   ModalWrapper,
 } from "../../../components/Elements/Modal/ModalWrapper";
-import { RotateWrapper } from "../../../components/Animation/RotateWrapper";
 import { getModelings } from "../api/getModelings";
 
 export const ModelingList: React.FC = () => {
@@ -50,11 +50,7 @@ export const ModelingList: React.FC = () => {
         ))}
       </Grid>
       <ModalWrapper ref={modalRef} onClose={onClose}>
-        <CanvasWrapper enableClick={true}>
-          <RotateWrapper autoRotation={true}>
-            <Modeling name={selectedModelingName} />
-          </RotateWrapper>
-        </CanvasWrapper>
+        <ModelingModalContent modelingName={selectedModelingName} />
       </ModalWrapper>
     </>
   );
