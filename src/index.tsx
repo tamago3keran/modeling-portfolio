@@ -1,12 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
 import { MainLayout } from "./components/Layout/MainLayout";
 import reportWebVitals from "./reportWebVitals";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: grey[50],
+    },
+  },
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <MainLayout />
+    <ThemeProvider theme={theme}>
+      <MainLayout />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

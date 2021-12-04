@@ -12,9 +12,9 @@ export const RotateWrapper: React.FC<Props> = ({
 }) => {
   const meshRef = useRef({} as any);
 
-  useFrame(({ clock }) => {
+  useFrame(() => {
     if (!autoRotation) return;
-    meshRef.current.rotation.y = clock.getElapsedTime();
+    meshRef.current.rotation.y += 0.01;
   });
 
   return <mesh ref={meshRef}>{children}</mesh>;
