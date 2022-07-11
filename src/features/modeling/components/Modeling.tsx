@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
@@ -7,6 +7,12 @@ type Props = {
 };
 
 export const Modeling: React.FC<Props> = ({ name }) => {
-  const gltf = useLoader(GLTFLoader, `/models/${name}.gltf`);
-  return <primitive object={gltf.scene} />;
+  const [data, setData] = useState({});
+  const { scene } = useLoader(GLTFLoader, `/models/${name}.gltf`);
+
+  useEffect(() => {
+    setData(scene.clone());
+  }, [scene]);
+
+  return <primitive object={data} />;
 };
