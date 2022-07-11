@@ -17,7 +17,7 @@ const Container = styled(Box)({
   alignItems: "center",
   flexDirection: "column",
   width: "inherit",
-  height: "inherit",
+  height: "inherit"
 });
 
 const CanvasContainer = styled(Box)({
@@ -25,18 +25,18 @@ const CanvasContainer = styled(Box)({
   height: "70vmin",
   border: "2px solid #eee",
   borderRadius: 20,
-  marginBottom: "4vmin",
+  marginBottom: "4vmin"
 });
 
 const ButtonsContainer = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  width: "70vmin",
+  width: "70vmin"
 });
 
 const RotateButton = styled(Button)({
-  width: "34vmin",
+  width: "34vmin"
 });
 
 export const ModelingModalContent: React.FC<Props> = ({ modelingName }) => {

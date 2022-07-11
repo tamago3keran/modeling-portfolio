@@ -1,10 +1,13 @@
 export const getModelings = () => {
   return [
     {
-      name: "notebook",
+      name: "cloud",
     },
     {
       name: "house",
+    },
+    {
+      name: "notebook",
     },
   ];
 };

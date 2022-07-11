@@ -6,7 +6,7 @@ import { ModelingModalContent } from "../../../features/modeling/components/Mode
 import { CanvasWrapper } from "../../../components/Elements/Canvas/CanvasWrapper";
 import {
   ModalHandler,
-  ModalWrapper,
+  ModalWrapper
 } from "../../../components/Elements/Modal/ModalWrapper";
 import { getModelings } from "../api/getModelings";
 
