@@ -12,5 +12,8 @@ export const getModelings = () => {
     {
       name: "notebook",
     },
+    {
+      name: "ruby",
+    },
   ];
 };
