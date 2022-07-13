@@ -4,6 +4,9 @@ export const getModelings = () => {
       name: "cloud",
     },
     {
+      name: "curved_display",
+    },
+    {
       name: "house",
     },
     {
