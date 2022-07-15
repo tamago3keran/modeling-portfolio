@@ -15,5 +15,8 @@ export const getModelings = () => {
     {
       name: "ruby",
     },
+    {
+      name: "trophy",
+    },
   ];
 };
